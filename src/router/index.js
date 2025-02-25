@@ -20,18 +20,7 @@ const routes = [
     component: () => import('../views/PortfolioView.vue'),
     meta: { title: 'Portfolio' }
   },
-  {
-    path: '/blog',
-    name: 'blog',
-    component: () => import('../views/BlogView.vue'),
-    meta: { title: 'Blog' }
-  },
-  {
-    path: '/read/:slug/:id',
-    name: 'articleDetail',
-    component: () => import('../views/ArticleView.vue'),
-    meta: { title: 'Blog' }
-  }
+ 
 ]
 
 const router = createRouter({
@@ -40,7 +29,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title + ' - bagasRakha();'; // Mengambil judul dari meta atau mengatur judul default jika tidak ada
+  document.title = to.meta.title + ' Nanda Muharam'; // Tab Browser Title
   next();
 });
 
