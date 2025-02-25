@@ -77,7 +77,7 @@ export default {
         </div>
         <div class="md:w-7/12">
           <p class="mb-3 md:mb-7 fadein-left fadeins-1">
-            &nbsp; &nbsp; &nbsp; seorang UI/UX Designer yang berkomitmen untuk menciptakan pengalaman digital yang relevan, intuitif, dan engaging. Bagi saya, desain bukan hanya soal estetika, tetapi bagaimana suatu produk bisa benar-benar relate dengan kebutuhan dan perilaku pengguna.
+            &nbsp; &nbsp; &nbsp; Seorang UI/UX Designer yang berkomitmen untuk menciptakan pengalaman digital yang relevan, intuitif, dan engaging. Bagi saya, desain bukan hanya soal estetika, tetapi bagaimana suatu produk bisa benar-benar relate dengan kebutuhan dan perilaku pengguna.
           </p>
           <p class="mb-3 fadein-left fadeins-2">
             &nbsp; &nbsp; &nbsp; Dengan pendekatan berbasis riset, saya selalu memastikan bahwa setiap desain yang saya buat tidak hanya terlihat menarik, tetapi juga mudah digunakan, fungsional, dan memberikan solusi nyata. Saya percaya bahwa desain yang baik adalah desain yang bisa membuat pengguna mencapai tujuannya dengan lebih cepat dan nyaman, tanpa hambatan yang tidak perlu.
