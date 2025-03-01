@@ -29,75 +29,80 @@ export default {
           imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg',
           status: 'Pemula'
         },
-        
       ],
       tools: [
-  {
-    id: 1,
-    name: 'Git',
-    imageUrl: 'https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png',
-    status: 'Professional Git Puller'
-  },
-  {
-    id: 2,
-    name: 'GitHub',
-    imageUrl: 'https://cdn-icons-png.flaticon.com/512/25/25231.png',
-    status: 'Professional Copy Url'
-  },
-  {
-    id: 3,
-    name: 'Figma',
-    imageUrl: require('@/assets/figma.png'),
-    status: 'Berpengalaman'
-  },
-]
-      
+        {
+          id: 1,
+          name: 'Git',
+          imageUrl: 'https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png',
+          status: 'Professional Git Puller'
+        },
+        {
+          id: 2,
+          name: 'GitHub',
+          imageUrl: 'https://cdn-icons-png.flaticon.com/512/25/25231.png',
+          status: 'Professional Copy Url'
+        },
+        {
+          id: 3,
+          name: 'Figma',
+          imageUrl: require('@/assets/figma.png'),
+          status: 'Berpengalaman'
+        },
+      ]
     };
   }
 }
 </script>
-<template>
-  <div
-    class="bg-[#1e1e1f] px-5 py-5 md:px-12 md:py-10 text-left border border-teal-500 rounded-3xl text-white mx-3 mb-5">
-    <article data-page="about">
 
+<template>
+  <div class="bg-[#1e1e1f] px-5 py-5 md:px-12 md:py-10 text-left border border-teal-500 rounded-3xl text-white mx-3 mb-5">
+    <article data-page="about">
       <header>
         <div class="text-2xl font-bold text-white mb-5 fadein-bot title-section flex items-center">
           About Me &nbsp;
-          <div class="h-[1px] w-32 bg-teal-300 md:w-96 aos-init aos-animate" data-aos="zoom-in-left"
-            data-aos-duration="600"></div>
+          <div class="h-[1px] w-32 bg-teal-300 md:w-96 aos-init aos-animate" data-aos="zoom-in-left" data-aos-duration="600"></div>
         </div>
       </header>
 
-      <section
-        class="text-sm md:text-lg text-justify flex flex-col gap-4 md:flex-row md:gap-8 md:justify-left md:items-center">
+      <section class="text-sm md:text-lg text-justify flex flex-col gap-4 md:flex-row md:gap-8 md:justify-center md:items-center">
+       <!-- Foto -->
+<div class="flex justify-center">
+  <img class="w-40 h-40 md:w-60 md:h-60 rounded-lg object-cover fadein-up"
+       :src="require('@/assets/FAST2.jpeg')" alt="Foto">
+</div>
+
+        <!-- Video -->
         <div class="flex justify-center">
-          <img class="w-9/12 rounded-full mb-3 fadein-up"
-          :src="require('@/assets/FAST2.jpeg')" alt="Foto">
+          <video autoplay loop muted playsinline class="w-full max-w-md md:max-w-lg h-auto rounded-xl shadow-lg fadein-up">
+            <source :src="require('@/assets/MAX2.mp4')" type="video/mp4">
+            Browser tidak mendukung video.
+          </video>
         </div>
+
+        <!-- Deskripsi -->
         <div class="md:w-7/12">
           <p class="mb-3 md:mb-7 fadein-left fadeins-1">
             &nbsp; &nbsp; &nbsp; Seorang UI/UX Designer yang berkomitmen untuk menciptakan pengalaman digital yang relevan, intuitif, dan engaging. Bagi saya, desain bukan hanya soal estetika, tetapi bagaimana suatu produk bisa benar-benar relate dengan kebutuhan dan perilaku pengguna.
           </p>
           <p class="mb-3 fadein-left fadeins-2">
-            &nbsp; &nbsp; &nbsp; Dengan pendekatan berbasis riset, saya selalu memastikan bahwa setiap desain yang saya buat tidak hanya terlihat menarik, tetapi juga mudah digunakan, fungsional, dan memberikan solusi nyata. Saya percaya bahwa desain yang baik adalah desain yang bisa membuat pengguna mencapai tujuannya dengan lebih cepat dan nyaman, tanpa hambatan yang tidak perlu.
+            &nbsp; &nbsp; &nbsp; Dengan pendekatan berbasis riset, saya selalu memastikan bahwa setiap desain yang saya buat tidak hanya terlihat menarik, tetapi juga mudah digunakan, fungsional, dan memberikan solusi nyata.
           </p>
         </div>
-
       </section>
-
     </article>
   </div>
 
+  <!-- SKILLS SECTION -->
   <div class="px-5 py-5 md:px-12 md:py-10 text-left text-white mx-3">
-    <article data-page="about">
+    <article data-page="skills">
       <header>
         <div class="text-2xl font-bold text-white mb-5 fadein-bot title-section flex items-center">
-          <div class="h-[1px] w-10 bg-teal-300 md:w-20 aos-init aos-animate" data-aos="zoom-in-left"
-            data-aos-duration="600"></div>
+          <div class="h-[1px] w-10 bg-teal-300 md:w-20 aos-init aos-animate" data-aos="zoom-in-left" data-aos-duration="600"></div>
           &nbsp; Skills
         </div>
       </header>
+      
       <section>
         <div>
           <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 dark:text-gray-400 mb-5">
@@ -111,43 +116,29 @@ export default {
             </li>
           </ul>
         </div>
+
         <div v-show="activeTab === 1">
-          <div class="grid grid-cols-2 gap-4 pb-32 md:grid-cols-3 md:gap-8 xl:grid-cols-4 xl:gap-10 2xl:gap-12">
-            <div v-for="item in tech" :key="item.id">
-              <div
-                class="item-tech flex cursor-pointer items-center gap-2 rounded border border-teal-500 px-2 py-2 hover:bg-white hover:bg-opacity-10 md:gap-3 lg:px-3">
-                <div class="flex h-12 w-12 items-center justify-center p-0 lg:h-16 lg:w-16 lg:p-2 zoom-in">
-                  <img alt="HTML" loading="lazy" width="32" height="32" decoding="async" data-nimg="1"
-                    class="img-tech drop-shadow-xl transition-all duration-300 h-[65%] w-[65%] lg:h-[85%] lg:w-[85%]  "
-                    :src="item.imageUrl" style="color: transparent;">
-                </div>
-                <div class="flex items-center text-sm md:text-base lg:text-lg">
-                  <div class="tech font-medium text-secondary transition-all duration-300 translate-y-0 ">{{ item.name }}
-                  </div>
-                  <div
-                    class="status-tech opacity-0 absolute mt-5 text-[10px] text-white transition-all duration-300 md:text-xs lg:text-sm">
-                    {{ item.status }}</div>
+          <div class="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4">
+            <div v-for="item in tech" :key="item.id" class="group item-tech flex items-center gap-2 rounded border border-teal-500 px-2 py-2 hover:bg-white hover:bg-opacity-10">
+              <img class="h-12 w-12 transition-transform duration-300 group-hover:scale-110" :src="item.imageUrl" alt="icon">
+              <div class="text-sm md:text-base lg:text-lg">
+                <div class="font-medium">{{ item.name }}</div>
+                <div class="status-tech opacity-0 transition-opacity duration-300 group-hover:opacity-100 text-xs text-gray-300">
+                  {{ item.status }}
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         <div v-show="activeTab === 2">
-          <div class="grid grid-cols-2 gap-4 pb-32 md:grid-cols-3 md:gap-8 xl:grid-cols-4 xl:gap-10 2xl:gap-12">
-            <div v-for="item in tools" :key="item.id">
-              <div
-                class="item-tech flex cursor-pointer items-center gap-2 rounded border border-teal-500 px-2 py-2 hover:bg-white hover:bg-opacity-10 md:gap-3 lg:px-3">
-                <div class="flex h-12 w-12 items-center justify-center p-0 lg:h-16 lg:w-16 lg:p-2 zoom-in">
-                  <img alt="HTML" loading="lazy" width="32" height="32" decoding="async" data-nimg="1"
-                    class="img-tech drop-shadow-xl transition-all duration-300 h-[65%] w-[65%] lg:h-[85%] lg:w-[85%]  "
-                    :src="item.imageUrl" style="color: transparent;">
-                </div>
-                <div class="flex items-center text-sm md:text-base lg:text-lg">
-                  <div class="tech font-medium text-secondary transition-all duration-300 translate-y-0 ">{{ item.name }}
-                  </div>
-                  <div
-                    class="status-tech opacity-0 absolute mt-5 text-[10px] text-white transition-all duration-300 md:text-xs lg:text-sm">
-                    {{ item.status }}</div>
+          <div class="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4">
+            <div v-for="item in tools" :key="item.id" class="group item-tech flex items-center gap-2 rounded border border-teal-500 px-2 py-2 hover:bg-white hover:bg-opacity-10">
+              <img class="h-12 w-12 transition-transform duration-300 group-hover:scale-110" :src="item.imageUrl" alt="icon">
+              <div class="text-sm md:text-base lg:text-lg">
+                <div class="font-medium">{{ item.name }}</div>
+                <div class="status-tech opacity-0 transition-opacity duration-300 group-hover:opacity-100 text-xs text-gray-300">
+                  {{ item.status }}
                 </div>
               </div>
             </div>
@@ -157,47 +148,3 @@ export default {
     </article>
   </div>
 </template>
-
-<style>
-.fadein-left {
-  opacity: 0;
-  animation: fadeInLeft 0.5s ease-out forwards;
-}
-
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.fadeins-1 {
-  animation-delay: 500ms;
-}
-
-.fadeins-2 {
-  animation-delay: 800ms;
-}
-
-.img-tech,
-.tech {
-  transition: transform 0.3s ease;
-}
-
-.item-tech:hover .img-tech {
-  transform: scale(1.3);
-}
-
-.item-tech:hover .tech {
-  transform: translateY(-12px);
-}
-
-.item-tech:hover .status-tech {
-  opacity: 1;
-}
-</style>

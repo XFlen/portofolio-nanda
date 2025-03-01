@@ -69,7 +69,7 @@ export default {
 </script>
 
 <template>
-  <div class="px-5 py-5 md:px-12 md:py-10 text-left text-amber-50 mx-3">
+  <div class="px-5 py-5 md:px-12 md:py-10 text-left text-white mx-3">
     <article data-page="about">
       <header>
         <div
@@ -88,12 +88,12 @@ export default {
           <!-- Kategori -->
           <h3 class="text-xl font-semibold text-white mb-3">{{ category }}</h3>
 
-          <div
+          <div  
             class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-3 xl:grid-cols-3 xl:gap-3 2xl:gap-5 fade-zoom-in"
           >
             <div v-for="item in projects" :key="item.id">
               <div
-                class="item-card flex flex-col items-center gap-2 bg-[#1e1e1f] hover:bg-[#282828] border border-[#383838] rounded-xl text-amber-50 md:gap-3 px-5 py-5 lg:px-5"
+                class="item-card flex flex-col items-center gap-2 bg-[#1e1e1f] hover:bg-[#282828] border border-[#383838] rounded-xl text-white md:gap-3 px-5 py-5 lg:px-5"
               >
                 <div
                   class="flex items-center justify-center p-0 h-full w-full lg:p-0 zoom-in"
